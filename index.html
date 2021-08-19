@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   
-  <title>Frontend Mentor | Invoice app</title>
+  <title>Invoice app</title> 
 </head>
 <body>
   <nav>
@@ -88,7 +87,54 @@
   
   Discard
   Save as Draft
-  Save & Send
+  Save & Send 
+  <div>
+    <button class="button button-one">button</button>
+    <button class="button button-two">button</button>
+    <button class="button button-three">edit</button>
+    <button class="button button-four">edit</button>
+    <button class="button button-five">button</button>
+  </div>
+
+  <form action="#" class='invoice-form'>
+    <div class="form-field">
+        <label for=""> Street Adress</label> <br>
+        <input type="text" class="text-field">
+    </div>
+
+    <div class="custom-select" id="custom-select">
+      <div class="current-selected">  
+        <span> Net 30 days </span>
+        <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4.228 4.228L9.456 1" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+      </div>
+      <div class="custom-select-dropdown" id="dropdown">
+        <ul>
+          <li class="dropdown-list-item">Net 1 Day</li>
+          <li class="dropdown-list-item">Net 7 days</li>
+          <li class="dropdown-list-item">Net 14 days</li>
+          <li class="dropdown-list-item">Net 30 days</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="date-picker">
+      <div class="selected-date">
+        <span class="selected-date-text"></span>
+        <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14 2h-.667V.667A.667.667 0 0012.667 0H12a.667.667 0 00-.667.667V2H4.667V.667A.667.667 0 004 0h-.667a.667.667 0 00-.666.667V2H2C.897 2 0 2.897 0 4v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm.667 12c0 .367-.3.667-.667.667H2A.668.668 0 011.333 14V6.693h13.334V14z" fill="#7E88C3" fill-rule="nonzero" opacity=".5"/></svg>
+      </div>
+      <div class="dates">
+        <div class="month">
+          <div class="arrows prev-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+          <div class="mth"></div>
+          <div class="arrows next-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+
+  </form>
+  
   <!-- Create new invoice end -->
+  <script src="./dist/main.js"></script>
 </body>
 </html>
