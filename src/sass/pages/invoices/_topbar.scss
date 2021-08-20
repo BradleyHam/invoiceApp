@@ -1,0 +1,21 @@
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    .right-side{
+        display: flex;
+        align-items: center;
+    }
+    .left-side p{
+        margin-top: 10px;
+        color: $textTertiary;
+    }
+}
+
+#filter-bar{
+    margin-right: 40px;
+    cursor: pointer;
+    &__down-icon{
+        margin-left: 35px;
+    }
+}
+

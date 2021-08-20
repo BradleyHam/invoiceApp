@@ -1,0 +1,73 @@
+
+nav{
+    height: 72px;
+    background-color: $dark;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @media(min-width: $desktop){
+        flex-flow: column;
+        border-radius: 0 20px 20px 0;
+        height: initial;
+    }
+}
+
+.nav__menu-icon{
+    width: 72px;
+    height:72px;
+    background-color: $primaryFeature;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 20px 20px 0;
+    position: relative;
+    @media(min-width: $desktop){
+        height: 100px;
+        width: 100px;
+    }
+   svg{
+       z-index: 2;
+       @media(min-width: $desktop){
+        transform: scale(1.4);
+    }
+   }
+   &:after{
+       content: '';
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       right: 0;
+       height: 50%;
+       background-color:$primaryFeatureLight;
+       z-index: 1;
+       border-radius: 20px 0 20px 0;
+   }
+}
+
+.nav{
+    &__user-icon{
+        width: 72px;
+        border-radius: 0 0 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: 1px solid #494E6E;
+        @media(min-width: $desktop){
+            border-top: 1px solid #494E6E;
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__avatar{
+        height: 32px;
+        width: 32px;
+        background: url('../assets/image-avatar.jpg');
+        background-position: center;
+        background-size: cover;
+        border-radius: 100%;
+        @media(min-width: $desktop){
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
