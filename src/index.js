@@ -1,13 +1,8 @@
 import "./sass/main.scss"
+import "./javascript/setup"
 import "./javascript/components/form/custom-select"
 import "./javascript/components/form/date-picker"
-import "./javascript/components/filterBar"
+import "./javascript/components/invoices/filterBar"
+import "./javascript/components/invoices/dataControllor"
 
 
-// let dataPromise = fetch("https://invoiceapp-6b326-default-rtdb.firebaseio.com/.json");
-
-// dataPromise
-//     .then(response => response.json())
-//     .then(data => console.log(data))
-
-// dataPromise.catch(() => console.log('something went wrong'))

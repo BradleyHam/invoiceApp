@@ -33,8 +33,8 @@
        <!----- DROPDOWN      --------------->
        <div class="filter-bar__dropdown">
         <label class="checkbox">
-          <span class="checkbox__input">
-            <input type="checkbox" name="checkbox">
+          <span class="checkbox__input draft">
+            <input type="checkbox" name="draft">
             <span class="checkbox__control">
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                 <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -43,8 +43,8 @@
           <span class="radio__label">Draft</span>
         </label>
         <label class="checkbox">
-          <span class="checkbox__input">
-            <input type="checkbox" name="checkbox">
+          <span class="checkbox__input pending">
+            <input type="checkbox" name="pending" >
             <span class="checkbox__control">
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                 <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -53,8 +53,8 @@
           <span class="radio__label">Pending</span>
         </label>
         <label class="checkbox">
-          <span class="checkbox__input">
-            <input type="checkbox" name="checkbox">
+          <span class="checkbox__input input-paid">
+            <input type="checkbox" name="paid">
             <span class="checkbox__control">
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden="true" focusable="false">
                 <path fill='none' stroke='currentColor' stroke-width='3' d='M1.73 12.91l6.37 6.37L22.79 4.59' /></svg>
@@ -75,10 +75,18 @@
      </div>
   </div>
 
-  <section class="invoices">
-    <ul class="invoices__list">
+  <section class="invoices" >
+    <ul class="invoices__list" id="invoice__list">
+      <!-- <li class="invoice">
+        <div class="invoice__id"><span class="text-tertiary">#</span>RT3080</div>
+        <div class="invoice__name">Jensen Huang</div>
+        <div class="invoice__date">Due  19 Aug 2021</div>
+        <div class="invoice__amount">$1499</div>
+        <div class="invoice__status paid"><p class='paid-text'>Paid</p></div>
+      </li> -->
     </ul>
   </section>
+
 </main>
 
 

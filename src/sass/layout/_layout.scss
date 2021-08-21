@@ -3,6 +3,7 @@ body{
     width: 100vw;
     background-color: $backgroundLight;
     position: relative;
+    //overflow-y: scroll;
 }
 
 nav{
@@ -20,12 +21,15 @@ nav{
 main{
     margin: 0  auto;
     margin-top: 100px;
-    padding: 0 24px;
+    padding: 0 24px 24px 24px;
+    overflow-y: scroll;
+    position: relative;
     @media(min-width: $tablet){
         padding: 0 48px;
     }
     @media(min-width: $desktop){
         padding: 0 200px;
+        margin-top: initial;
     }
     @media(min-width: 1400px){
         padding: 0 355px;

@@ -1,0 +1,121 @@
+.invoices{
+    margin-top: 20px;
+    ul{
+        padding: 10px 0 40px 0;
+    }
+}
+
+.invoice{
+    margin-top: 20px;
+    padding: 24px;
+    background: white;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: $shadowOne;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-gap: 10px;
+    grid-template-areas:
+    "id name"
+    ". ."
+    "date status"
+    "amount status";
+    align-items: center;
+    justify-items: start;
+
+    @media(min-width: $tablet){
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas: "id date name amount status";
+        
+
+    };
+   
+
+    &__id{
+        grid-area: id;
+       
+    }
+    &__amount{
+        grid-area: amount;
+        
+        font-size: 16px;
+    }
+    &__name{
+        grid-area: name;
+        justify-self: end;
+        color: $textTertiary;
+        @media(min-width: $tablet){
+            justify-self: start;
+        }
+    }
+    &__status{
+        grid-area: status;
+        justify-self: end;
+        align-self: center;
+        height: 40px;
+        width: 104px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    &__date{
+        grid-area: date;
+        color: $textTertiary;
+    }
+}
+
+.paid{
+    background: #33d6a013;
+    color: #33D69F;
+    border-radius: 8px;
+    position: relative;
+    &-text::before{
+        content: "";
+        background: currentColor;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-60%);
+    }
+}
+.pending{
+    background: #ffab3e15;
+    color: #FFAA3E;
+    border-radius: 8px;
+    position: relative;
+    &-text::before{
+        content: "";
+        background: currentColor;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 15px;
+        transform: translateY(-60%);
+    }
+}
+
+.draft{
+    background: #373b5323;
+    color: #373B53;
+    border-radius: 8px;
+    position: relative;
+    &-text::before{
+        content: "";
+        background: currentColor;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-60%);
+    }
+}
