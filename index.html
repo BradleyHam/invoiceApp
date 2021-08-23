@@ -86,8 +86,170 @@
       </li> -->
     </ul>
   </section>
-
 </main>
+
+<section class="form-section">
+<form action="#" class='invoice-form'>
+  <button class="back-button"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>Go back</button>
+  <h2>New Invoice</h2>
+  <p class="section-label bill-from__label">Bill from</p>
+  <div class="bill-from">
+    <div class="form-field bill-from__street-address">
+      <label for=""> Street Adress</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-from__city">
+      <label for=""> city</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-from__post-code">
+      <label for=""> post code</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-from__country">
+      <label for=""> country</label> <br>
+      <input type="text" class="text-field">
+    </div>
+  </div>
+  <p class="section-label bill-to__label">Bill to</p>
+  <div class="bill-to">
+    <div class="form-field bill-to__client-name">
+      <label for=""> Client Name</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-to__client-email">
+      <label for=""> Client Email</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-to__street-address">
+      <label for="">Street Address</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-to__city">
+      <label for=""> City</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-to__post-code">
+      <label for=""> Post Code</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field bill-to__country">
+      <label for=""> Country</label> <br>
+      <input type="text" class="text-field">
+    </div>
+  </div>
+  
+<div class="invoice_details mt-1">
+<div class="date-picker__container">
+  <div class="date-picker__label invoice_details__label">Invoice Date</div>
+  <div class="date-picker">
+    <div class="selected-date">
+      <span class="selected-date-text"></span>
+      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14 2h-.667V.667A.667.667 0 0012.667 0H12a.667.667 0 00-.667.667V2H4.667V.667A.667.667 0 004 0h-.667a.667.667 0 00-.666.667V2H2C.897 2 0 2.897 0 4v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm.667 12c0 .367-.3.667-.667.667H2A.668.668 0 011.333 14V6.693h13.334V14z" fill="#7E88C3" fill-rule="nonzero" opacity=".5"/></svg>
+    </div>
+    <div class="dates">
+      <div class="month">
+        <div class="arrows prev-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+        <div class="mth"></div>
+        <div class="arrows next-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+      </div>
+      <div class="days"></div>
+    </div>
+  </div>
+  </div>
+
+  
+  <div class="custom-select__container">
+  <div class="custom-select__label invoice_details__label">Payment Terms</div>
+  <div class="custom-select" id="custom-select">
+    <div class="current-selected">  
+      <span> Net 30 days </span>
+      <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4.228 4.228L9.456 1" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+    </div>
+    <div class="custom-select-dropdown" id="dropdown">
+      <ul>
+        <li class="dropdown-list-item">Net 1 Day</li>
+        <li class="dropdown-list-item">Net 7 days</li>
+        <li class="dropdown-list-item">Net 14 days</li>
+        <li class="dropdown-list-item">Net 30 days</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="form-field ">
+  <label for="" class="invoice_details__label">Project Description</label> <br>
+  <input type="text" class="text-field">
+</div>
+
+</div>
+
+  <div class="item__section">
+  <div class="item-list">
+    <h2>Item List</h2>
+    <div class="item-list__grid-container">
+    <div class="form-field item-name">
+      <label for="" class="item-label__name">Item name</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field item-qty">
+      <label for="" class="item-label__qty">Qty</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field item-price">
+      <label for="" class="item-label__price">price</label> <br>
+      <input type="text" class="text-field">
+    </div>
+    <div class="form-field item-total">
+      <label for="" class="item-label__total">total</label> <br>
+      <div class='total-number'>400</div>
+    </div>
+    <svg class='bin' width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/></svg>
+      </div>
+    </div>
+    <button class="button-five button"><svg width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z" fill="#7C5DFA" fill-rule="nonzero"/></svg> Add New Item</button>
+  </div>
+    </div>
+</form>
+<footer class="form-footer">
+  <button class="button button-three">Discard</button>
+  <button class="button button-six">Save as Draft</button>
+  <button class="button button-two">Save & Send</button>
+</footer>
+</section>
+  <!-- <div class="form-field">
+      <label for=""> Street Adress</label> <br>
+      <input type="text" class="text-field">
+  </div>
+  <div class="custom-select" id="custom-select">
+    <div class="current-selected">  
+      <span> Net 30 days </span>
+      <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4.228 4.228L9.456 1" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>
+    </div>
+    <div class="custom-select-dropdown" id="dropdown">
+      <ul>
+        <li class="dropdown-list-item">Net 1 Day</li>
+        <li class="dropdown-list-item">Net 7 days</li>
+        <li class="dropdown-list-item">Net 14 days</li>
+        <li class="dropdown-list-item">Net 30 days</li>
+      </ul>
+    </div>
+  </div>
+  <div class="date-picker">
+    <div class="selected-date">
+      <span class="selected-date-text"></span>
+      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M14 2h-.667V.667A.667.667 0 0012.667 0H12a.667.667 0 00-.667.667V2H4.667V.667A.667.667 0 004 0h-.667a.667.667 0 00-.666.667V2H2C.897 2 0 2.897 0 4v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zm.667 12c0 .367-.3.667-.667.667H2A.668.668 0 011.333 14V6.693h13.334V14z" fill="#7E88C3" fill-rule="nonzero" opacity=".5"/></svg>
+    </div>
+    <div class="dates">
+      <div class="month">
+        <div class="arrows prev-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+        <div class="mth"></div>
+        <div class="arrows next-mth"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l4 4-4 4" stroke="#7C5DFA" stroke-width="2" fill="none" fill-rule="evenodd"/></svg></div>
+      </div>
+      <div class="days"></div>
+    </div>
+  </div> -->
+
 
 
 
@@ -110,7 +272,6 @@
         <label for=""> Street Adress</label> <br>
         <input type="text" class="text-field">
     </div>
-
     <div class="custom-select" id="custom-select">
       <div class="current-selected">  
         <span> Net 30 days </span>
@@ -125,7 +286,6 @@
         </ul>
       </div>
     </div>
-
     <div class="date-picker">
       <div class="selected-date">
         <span class="selected-date-text"></span>
@@ -140,7 +300,6 @@
         <div class="days"></div>
       </div>
     </div>
-
   </form>
    -->
   <!-- Create new invoice end -->

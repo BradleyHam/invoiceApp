@@ -1,0 +1,31 @@
+
+form{
+    background: white;
+    width: 100%;
+    padding: 23px;
+    padding-bottom: 88px;
+    :not(h2){
+        color: $textSecondary;
+    }
+  
+    .section-label{
+        padding: 20px 0;
+        color: $primaryFeature
+   }
+    .text-field, .dropdown-container{
+       @include formField;
+    }
+    .text-field{
+        outline: none;
+        padding: 0 20px;
+     }
+
+    .text-field:active{
+        border: 1px solid $primaryFeatureLight;
+    }
+    .text-field:focus{
+        border: 1px solid $primaryFeatureLight;
+    }   
+   
+}
+

@@ -29,14 +29,16 @@
     }
     &-two{
         background: $primaryFeature;
-        width: 130px;
+        background: $primaryFeature;
+       
     }
     &-two:hover{
         background: $primaryFeatureLight;
     }
     &-three{
         background:$backgroundLight;
-        width: 73px;
+        color: $textSecondary;
+    
     }
     &-three:hover{
         background:$faintPrimary;
@@ -49,9 +51,34 @@
     }
     &-five{
         background: $backgroundLight;
-        width: 350px;
+        color: $textSecondary;
+        width: 100%;
+        margin-top: 48px;
+        svg{
+            margin-right: 5px;
+        }
+        
     }
     &-five:hover{
         background: $faintPrimary;
+   
+    }
+    &-six{
+        background: $dark;
+        color: $faintPrimary;
+    }
+    &-six:hover{
+        background: $superDark;
+        color: $faintPrimary;
+    }
+}
+
+.back-button{
+    border: none;
+    background: transparent;
+    margin-bottom: 27px;
+    color: $textPrimary;
+    svg{
+        margin-right: 23px;
     }
 }

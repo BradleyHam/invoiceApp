@@ -18,7 +18,8 @@ function dataController(){
     }
 }
 
-function displayData(data){
+export function displayData(data){
+    invoiceList.innerHTML = "";
     data.forEach(({clientEmail: email, clientName: name, total: amount, createdAt: date, id, status}) => {
         let invoice = ` 
         <li class="invoice">
