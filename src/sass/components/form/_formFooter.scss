@@ -1,0 +1,28 @@
+.form-footer{
+    box-shadow: 10px -10px 50px rgba(0,0,0,.1);
+    background: white;
+    z-index: 2000;
+    right: 0;
+    left:0;
+    bottom: 0;
+    position: fixed;
+   
+    @media (min-width: $tablet) {
+        width: 616px;
+        border-radius: 0 20px 20px 0;
+        button:first-child{
+            margin-right: auto;
+        }
+        button:not(:first-child){
+            margin-right: 8px;
+        }
+    }
+    @media (min-width: $desktop) {
+        left: 100px;
+    }
+}
+
+
+
+
+

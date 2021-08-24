@@ -1,7 +1,6 @@
 
 .custom-select{
     margin-top: 13px;
-  
     height: 48px;
     border-radius: 4px;
     border: 1px solid $faintPrimary;
@@ -13,7 +12,6 @@
     &.active .current-selected{
       border: 1px solid $primaryFeature
     }
-    
     &-dropdown{
       position: absolute;
       top: 100%;

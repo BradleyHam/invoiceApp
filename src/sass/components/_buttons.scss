@@ -4,12 +4,14 @@
     padding: 18px 24px; 
     cursor: pointer;
     color: white;
+
     &-one{
         background: $primaryFeature;
         width: 100px;
         display: flex;
         align-items: center;
         padding: 0;
+        
         .white-circle{
             background: white;
             height: 32px;
@@ -54,6 +56,7 @@
         color: $textSecondary;
         width: 100%;
         margin-top: 48px;
+        margin-bottom: 88px;
         svg{
             margin-right: 5px;
         }
@@ -78,6 +81,7 @@
     background: transparent;
     margin-bottom: 27px;
     color: $textPrimary;
+    cursor: pointer;
     svg{
         margin-right: 23px;
     }

@@ -26,6 +26,60 @@ form{
     .text-field:focus{
         border: 1px solid $primaryFeatureLight;
     }   
-   
 }
+
+.form-section{
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    display: none;
+    z-index: 10;
+    overflow-y: scroll;
+    @media(min-width: $tablet){
+        border-radius: 0 20px 20px 0;
+    }
+    @media(min-width: $desktop){
+        margin-left: 80px;
+        width: 636px;
+        top: 0;
+    }
+}
+
+form{
+    padding-bottom: 100px;
+    overflow: hidden;
+    display: none;
+    // margin-bottom: 99px;
+    // padding-bottom: 88px;
+    // border-radius: 0 20px 20px 0;
+    @media(min-width: $tablet){
+        border-radius: 0 20px 20px 0;
+    }
+    @media(min-width: $desktop){
+        padding-left: 43px;
+    }
+}
+
+.form-section.active, .form-section.active form{
+    display: block;
+}
+.form-section.active + main{
+    background: black!important;
+}
+.delete-item{
+    cursor: pointer;
+}
+
+ main.form-active::after{
+        background: rgba(0, 0, 0, 0.514);
+        content: '';
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 1;
+}
+
 

@@ -7,7 +7,7 @@
   
   <title>Invoice app</title> 
 </head>
-<body>
+<body >
   <nav>
     <div class="nav__menu-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fill-rule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
@@ -19,7 +19,7 @@
   <form action="" class="invoice-form">
   </form>
 
-<main>
+<main id='main'>
   <div class="top-bar">
     <div class="left-side">
       <h1>Invoices</h1>
@@ -65,7 +65,7 @@
       </div>
         <!----- DROPDOWN      --------------->
     <div>
-      <button class="button-one button">
+      <button id="new-invoice" class="button-one button">
         <div class="white-circle">
           <svg width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z" fill="#7C5DFA" fill-rule="nonzero"/></svg>
         </div>
@@ -88,9 +88,9 @@
   </section>
 </main>
 
-<section class="form-section">
+<section id="form-section" class="form-section">
 <form action="#" class='invoice-form'>
-  <button class="back-button"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>Go back</button>
+  <button id="back-button" class="back-button"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>Go back</button>
   <h2>New Invoice</h2>
   <p class="section-label bill-from__label">Bill from</p>
   <div class="bill-from">
@@ -140,7 +140,7 @@
   </div>
   
 <div class="invoice_details mt-1">
-<div class="date-picker__container">
+<div class="date-picker__container invoice_details__date-picker">
   <div class="date-picker__label invoice_details__label">Invoice Date</div>
   <div class="date-picker">
     <div class="selected-date">
@@ -158,8 +158,7 @@
   </div>
   </div>
 
-  
-  <div class="custom-select__container">
+  <div class="custom-select__container invoice_details__custom-select">
   <div class="custom-select__label invoice_details__label">Payment Terms</div>
   <div class="custom-select" id="custom-select">
     <div class="current-selected">  
@@ -177,7 +176,7 @@
   </div>
 </div>
 
-<div class="form-field ">
+<div class="form-field invoice_details__description">
   <label for="" class="invoice_details__label">Project Description</label> <br>
   <input type="text" class="text-field">
 </div>
@@ -185,9 +184,9 @@
 </div>
 
   <div class="item__section">
-  <div class="item-list">
+  <div id="item-list" class="item-list">
     <h2>Item List</h2>
-    <div class="item-list__grid-container">
+    <div class="item item-list__grid-container">
     <div class="form-field item-name">
       <label for="" class="item-label__name">Item name</label> <br>
       <input type="text" class="text-field">
@@ -204,18 +203,19 @@
       <label for="" class="item-label__total">total</label> <br>
       <div class='total-number'>400</div>
     </div>
-    <svg class='bin' width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/></svg>
+    <svg id='bin' class="bin" width="13" height="16" xmlns="http://www.w3.org/2000/svg"><path class="delete-item" d="M11.583 3.556v10.666c0 .982-.795 1.778-1.777 1.778H2.694a1.777 1.777 0 01-1.777-1.778V3.556h10.666zM8.473 0l.888.889h3.111v1.778H.028V.889h3.11L4.029 0h4.444z" fill="#888EB0" fill-rule="nonzero"/></svg>
       </div>
     </div>
-    <button class="button-five button"><svg width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z" fill="#7C5DFA" fill-rule="nonzero"/></svg> Add New Item</button>
+    <div id="new-item" class="button-five button"><svg  width="11" height="11" xmlns="http://www.w3.org/2000/svg"><path  d="M6.313 10.023v-3.71h3.71v-2.58h-3.71V.023h-2.58v3.71H.023v2.58h3.71v3.71z" fill="#7C5DFA" fill-rule="nonzero"/></svg> Add New Item</div>
   </div>
     </div>
+    <footer class="form-footer">
+      <button class="button button-three">Discard</button>
+      <button class="button button-six">Save as Draft</button>
+      <button class="button button-two">Save & Send</button>
+    </footer>
 </form>
-<footer class="form-footer">
-  <button class="button button-three">Discard</button>
-  <button class="button button-six">Save as Draft</button>
-  <button class="button button-two">Save & Send</button>
-</footer>
+
 </section>
   <!-- <div class="form-field">
       <label for=""> Street Adress</label> <br>
