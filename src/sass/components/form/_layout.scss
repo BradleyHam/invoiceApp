@@ -196,3 +196,9 @@ main.form-active{
 body.form-active{
     overflow: hidden
 }
+
+@media(min-width: $tablet){
+    .item-list .item:not(:first-of-type) label{
+        display: none;
+     }
+}
