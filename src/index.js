@@ -5,6 +5,7 @@ import "./javascript/components/form/date-picker"
 import "./javascript/components/invoices/filterBar"
 import "./javascript/newInvoice"
 import "./javascript/components/form/new-item"
+import "./javascript/components/form/fromData"
 
 
 

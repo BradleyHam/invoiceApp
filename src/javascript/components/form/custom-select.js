@@ -6,8 +6,6 @@ customSelect.addEventListener("click", () => {
     customSelect.classList.toggle("active");
 })
 
-console.log(currentSelected)
-
 listItems.forEach((item)=>{
     item.addEventListener("click", (e)=>{
         currentSelected.innerText = e.target.innerText;
