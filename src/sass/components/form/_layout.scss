@@ -202,3 +202,16 @@ body.form-active{
         display: none;
      }
 }
+
+.form-field.item-total{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+}
+
+.total{
+    height: 48px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}

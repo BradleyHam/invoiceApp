@@ -1,15 +1,10 @@
-let save = document.getElementById("save-button");
-let form = document.getElementById("invoice-form");
-let terms = document.getElementById("payment-terms");
-let invoiceDatePicker = document.getElementById("invoice-date-picker");
-let paymentTerms = document.getElementById("payment-terms");
-
+import formElements from '../form/formElements';
 
 let inputElements = Array.from(document.querySelectorAll("#invoice-form input"));
 
-form.addEventListener('submit', (e) => {
-
+formElements.form.addEventListener('submit', (e) => {
     e.preventDefault();
+
     let data = inputElements.reduce((acc, input) => {
         return {
             ...acc, 
@@ -18,13 +13,9 @@ form.addEventListener('submit', (e) => {
     }, {});
 
     let { senderStreet , senderCountry, senderCity, senderPostCode, clientCity, clientCountry, clientPostCode, clientStreet, clientName, clientEmail, description} = data;
-
-    let invoiceDue = invoiceDatePicker.innerText.replaceAll(' / ', '-');
-
-    let termNumber = terms.innerText.match(/\d+/)[0];
-
+    let invoiceDue = formElements.invoiceDatePicker.innerText.replaceAll(' / ', '-');
+    let termNumber = formElements.terms.innerText.match(/\d+/)[0];
     let today = formatDate(new Date());
-
     let invoiceStructuredData = {
         clientAddress: {
              city: clientCity,
@@ -47,9 +38,7 @@ form.addEventListener('submit', (e) => {
              street: senderStreet
             }
     };
-
-    let invoices = JSON.parse(localStorage.getItem('invoices'));
-    console.log(invoiceStructuredData)
+  //  let invoices = JSON.parse(localStorage.getItem('invoices'));
 });
 
 function formatDate(date) {

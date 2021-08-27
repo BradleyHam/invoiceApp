@@ -78,6 +78,43 @@ form{
 }
 
 svg path:hover{
-    fill:red;
+    fill:$secondaryFeature;
 }
 
+:first-child.item{
+    margin-bottom: -13px;
+}
+.form-field.error{
+    position: relative;
+    label{
+        color: $secondaryFeature;
+    }
+    input{
+        border: 1px solid $secondaryFeature;
+    }
+}
+
+form.error #new-item{
+    position: relative;
+    &::after{
+        content: '- All fields required';
+        left: 20px;
+        bottom: -40px;
+        position: absolute;
+        color: $secondaryFeature;
+    }
+    // &::before{
+    //     content: '- at least one item required';
+    //     bottom: -60px;
+    //     position: absolute;
+    //     left: 20px;
+    //     color: $secondaryFeature;
+    // }
+}
+
+#new-item{
+    @media(min-width: $tablet){
+        margin-bottom: 148px
+    }
+    
+}
