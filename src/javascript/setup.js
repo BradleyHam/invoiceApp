@@ -2,7 +2,7 @@ localStorage.setItem("filterArray", '[]');
 
 let invoiceList = document.getElementById('invoice__list');
 
-function dataController(){
+export function dataController(){
     if(localStorage.invoices){
         let data = JSON.parse(localStorage.getItem('invoices'));
         displayData(data)
@@ -27,10 +27,14 @@ export function displayData(data){
             <div class="invoice__name">${name}</div>
             <div class="invoice__date">${date}</div>
             <div class="invoice__amount">$${amount}</div>
-            <div class="invoice__status ${status}"><p class='${status}-text'>${status[0].toUpperCase() + status.slice(1).toLowerCase()}</p></div>
+             <div class="invoice__status ${status}"><p class='${status}-text'>${status[0].toUpperCase() + status.slice(1).toLowerCase()}</p></div>
          </li>`;
          invoiceList.innerHTML = invoiceList.innerHTML + invoice;
+
     })
+  
 }
 
 dataController();
+
+

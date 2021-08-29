@@ -1,6 +1,6 @@
 import formElements from '../form/formElements';
 
-formElements.save.addEventListener('click', () => {
+export function validate(){
     let allInputFields = Array.from(formElements.form.querySelectorAll('input'));
     let errors = false;
     allInputFields.forEach(item => {
@@ -21,7 +21,13 @@ formElements.save.addEventListener('click', () => {
     }else{
         formElements.form.classList.remove('error');
     }
-});
+    return errors;
+}
+   
+
+
+
+
 
 // run validate function after save button clicked 
 // check all from fields for input 

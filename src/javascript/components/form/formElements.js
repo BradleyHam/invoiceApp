@@ -1,7 +1,8 @@
 const form = document.getElementById("new-invoice-form");
 const save = document.getElementById("save-button");
 const newItem = document.getElementById("new-item");
-
+const formSection = document.getElementById("form-section");
+const invoiceList = document.getElementById('invoice__list');
 
 // ------- INPUT FIELDS 
 const senderStreet = document.getElementById("senderStreet");
@@ -10,6 +11,7 @@ const senderPostCode = document.getElementById("senderPostCode");
 const senderCountry = document.getElementById("senderCountry");
 const invoiceDatePicker = document.getElementById("invoice-date-picker");
 const terms = document.getElementById("payment-terms");
+
 
 export default {
     form, 
@@ -20,7 +22,9 @@ export default {
     senderCountry,
     invoiceDatePicker,
     terms,
-    newItem
+    newItem,
+    formSection,
+    invoiceList
 }
 
 

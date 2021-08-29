@@ -1,8 +1,15 @@
 import formElements from '../form/formElements';
+import { displayData } from '../../setup';
+import { validate } from '../form/validation';
 
-let inputElements = Array.from(document.querySelectorAll("#invoice-form input"));
+let inputElements = Array.from(document.querySelectorAll("#new-invoice-form input"));
 
-formElements.form.addEventListener('submit', (e) => {
+formElements.save.addEventListener('click', (e) => {
+
+    // kick out of function if validate return errors
+     let errors = validate();
+     if (errors){ return };
+    
     e.preventDefault();
 
     let data = inputElements.reduce((acc, input) => {
@@ -30,15 +37,32 @@ formElements.form.addEventListener('submit', (e) => {
         id: generateId(),
         items: structureInvoiceItems(),
         paymentDue: invoiceDue,
-        paymentTerms: termNumber,
+        paymentTerms: +termNumber,
         senderAddress: {
              city: senderCity, 
              country: senderCountry,
              postCode: senderPostCode, 
              street: senderStreet
-            }
+            },
+        status: "pending"
     };
-  //  let invoices = JSON.parse(localStorage.getItem('invoices'));
+    invoiceStructuredData.total = getTotal(invoiceStructuredData.items);
+    let invoices = JSON.parse(localStorage.getItem('invoices'));
+    invoices.push(invoiceStructuredData);
+    localStorage.setItem('invoices', JSON.stringify(invoices));
+    
+    formElements.invoiceList.insertAdjacentHTML('afterbegin', ` 
+    <li class="invoice">
+        <div class="invoice__id"><span class="text-tertiary">#</span>${invoiceStructuredData.id}</div>
+        <div class="invoice__name">${invoiceStructuredData.clientName}</div>
+        <div class="invoice__date">${invoiceStructuredData.createdAt}</div>
+        <div class="invoice__amount">$${invoiceStructuredData.total}</div>
+         <div class="invoice__status ${invoiceStructuredData.status}"><p class='${invoiceStructuredData.status}-text'>${invoiceStructuredData.status[0].toUpperCase() + invoiceStructuredData.status.slice(1).toLowerCase()}</p></div>
+     </li>`);
+
+    formElements.formSection.classList.remove('active');
+    main.classList.remove('form-active');
+
 });
 
 function formatDate(date) {
@@ -80,9 +104,17 @@ function structureInvoiceItems(){
                 ...acc, 
                 [item.name]: item.value
             }
-        }, {})
+        }, {});
+        structuredItem.price = +structuredItem.price;
+        structuredItem.quantity = +structuredItem.quantity;
+        structuredItem.total = (+(item.querySelector('.total').innerText.slice(1)));
         itemArray.push(structuredItem)
     })
     return itemArray;
 }
 
+function getTotal(items){
+    return items.reduce((acc, item) => {
+        return acc + item.total;
+    }, 0);
+}
