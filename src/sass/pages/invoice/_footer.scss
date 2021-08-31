@@ -1,0 +1,16 @@
+.invoice-footer{
+   display: flex;
+   background: white;
+   padding: 21px  24px;
+   justify-content: space-around;
+   .mark-paid{
+       width: 150px;
+   }
+   .delete{
+       width: 90px;   
+   }
+   @media(min-width: $tablet){
+       display: none;
+   }
+}
+

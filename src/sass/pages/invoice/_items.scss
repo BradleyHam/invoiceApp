@@ -1,0 +1,87 @@
+.invoice-page__invoice-details{
+    .items{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .item, .grand-total__container{
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px;
+    }
+    .grand-total__container{
+        background: $dark;
+        border-radius: 0 0 8px 8px;
+        color: white;
+        height: 80px;
+    }
+    .item-description{
+        display: none;
+    }
+    .item{
+        background: #F9FAFE;
+        color: $textPrimary;
+        margin-bottom: initial;
+        height: 80px;
+        &-qty, &-price {
+            display: none;
+        }
+      
+        &-summary{
+            color: $textSecondary;
+        }
+        &-summary__container{
+           display: flex;
+           flex-flow: column;
+           justify-content: space-between;
+           height: 35px;
+        }
+    }
+    p{
+        margin-bottom: initial;
+    }
+    // -------
+
+    @media(min-width: $tablet){
+        .items{
+            margin-top: 35px;
+        }
+        .item{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            justify-items: end;
+            grid-template-areas: 
+            "summary qty price total"
+            ;
+            &-qty{
+                grid-area: qty
+            }
+            &-price{
+                grid-area: price
+            }
+            &-total{
+                grid-area: total
+            }
+            &-summary__container{
+                grid-area: summary;
+                justify-self: start;
+            }
+            &-qty, &-price {
+                display: initial;
+            }
+        }
+        .item-summary{
+            display:none;
+        }
+        .item-summary__container{
+            justify-content: center;
+        }
+    }
+}
+
+.item-description{
+    color: $textTertiary!important;
+    border-radius: 8px 8px 0 0;
+}

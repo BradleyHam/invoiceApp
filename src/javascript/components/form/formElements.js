@@ -3,8 +3,10 @@ const save = document.getElementById("save-button");
 const newItem = document.getElementById("new-item");
 const formSection = document.getElementById("form-section");
 const invoiceList = document.getElementById('invoice__list');
+const backButton = document.getElementById("back-button");
 
 // ------- INPUT FIELDS 
+let inputElements = Array.from(document.querySelectorAll("#new-invoice-form input"));
 const senderStreet = document.getElementById("senderStreet");
 const senderCity = document.getElementById("senderCity");
 const senderPostCode = document.getElementById("senderPostCode");
@@ -24,7 +26,9 @@ export default {
     terms,
     newItem,
     formSection,
-    invoiceList
+    invoiceList,
+    backButton,
+    inputElements
 }
 
 

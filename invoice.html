@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+  <title>Frontend Mentor | Invoice app</title>
+</head>
+
+<body class='invoice-page'>
+
+  <nav>
+    <div class="nav__menu-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26"><path fill="#FFF" fill-rule="evenodd" d="M20.513 0C24.965 2.309 28 6.91 28 12.21 28 19.826 21.732 26 14 26S0 19.826 0 12.21C0 6.91 3.035 2.309 7.487 0L14 12.9z"/></svg>
+    </div>
+    <div class="nav__user-icon">
+      <div class="nav__avatar"></div>
+    </div>
+  </nav>
+
+  <main id='main'>
+    <a href="/">
+      <button id="back-button" class="back-button"><svg width="7" height="10" xmlns="http://www.w3.org/2000/svg"><path d="M6.342.886L2.114 5.114l4.228 4.228" stroke="#9277FF" stroke-width="2" fill="none" fill-rule="evenodd"/></svg>Go back</button>
+   </a>
+    <div class="invoice-page__status-bar">
+      <p>Status</p>
+      <div class="invoice__status pending">Pending</div>
+      <div class="buttonRow">
+        <button class="button button-three">Edit</button>
+        <button class="button button-four delete">Delete</button>
+        <button class="button button-two mark-paid">Mark as Paid</button>
+     </div>
+    </div>
+    <div class="invoice-page__invoice-details" id="detail-container">
+        <div class="id-job">
+          <p class='id'> <span class="text-tertiary">#</span>ES3457</p>
+          <p class="job">Graphic Designer</p>
+        </div>
+        <div class="invoice-page__bill-from">
+            <p class='street'>street</p>
+            <p class='city'>city</p>
+            <p class='post-code'>post code</p>
+            <p class='country'>country</p>
+        </div>
+        <div class="dates">
+          <div class="invoice-date__container">
+            <p>Invoice Date</p>
+            <p class="invoice-date">23/2/12</p>
+          </div>
+          <div class="payment-due__container">
+            <p>Payment Due</p>
+            <p class="payment-due__date"> 12/4/12</p>
+          </div>
+        </div>
+        <div class="bill-to__container">
+          <div>
+            <p>bill to</p>
+            <p class="bill-to__name">Alex Grim</p>
+          </div>  
+          <div class="invoice-page__bill-to">
+            <p class='street'>street</p>
+            <p class='city'>city</p>
+            <p class='post-code'>post code</p>
+            <p class='country'>country</p>
+        </div>
+        </div>
+        <div class="email-container">
+          <p>Sent to</p>
+          <p class='email'>bradleyjamesham@gmail.com</p>
+        </div>
+        <div class="items">
+          <div class="item item-description">
+            <div class="item-summary__container">
+              <div class="item-job">Item Name</div>
+            </div>
+            <div class="item-qty">QTY</div>
+            <div class="item-price">Price</div>
+            <div class="item-total">Total</div>
+          </div>
+          <div class="item">
+          <div class="item-summary__container">
+            <div class="item-job">Design</div>
+            <div class="item-summary">1 x $200</div>
+          </div>
+          <div class="item-qty">3</div>
+          <div class="item-price">$200</div>
+          <div class="item-total">$200</div>
+        </div>
+        <div class="grand-total__container">
+          <p>Grand Total</p>
+          <div class="grand-total">$200</div>
+        </div>
+        </div>
+    </div>
+  </main>
+
+  <footer class="invoice-footer">
+    <button class="button button-three">Edit</button>
+    <button class="button button-four delete">Delete</button>
+    <button class="button button-two mark-paid">Mark as Paid</button>
+  </footer>
+
+  <!-- Delete Modal end -->
+  <script src="./dist/invoice.js"></script>
+</body>
+
+</html>

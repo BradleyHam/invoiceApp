@@ -1,0 +1,36 @@
+.invoice-page__status-bar{
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $textTertiary;
+    box-shadow: $shadowOne;
+    .buttonRow{
+        display: none;
+      
+    }
+    @media(min-width: $tablet) {
+        .invoice__status{
+            margin-left: 22px;
+            margin-right: auto;
+        }
+    }
+}
+
+
+.invoice-page__status-bar .buttonRow{
+    @media(min-width: $tablet) {
+        display: flex;
+        button:not(:last-child){
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
+
+
+

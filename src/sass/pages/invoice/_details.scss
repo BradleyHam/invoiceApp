@@ -1,0 +1,87 @@
+.invoice-page__invoice-details{
+    box-shadow: $shadowOne;
+    color: $textTertiary;
+    margin-top: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    row-gap: 33px;
+    font-size: 11px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    "id-job ."
+    "bill-from ."
+    "date bill-to"
+    "email email"
+    "items items"
+    ;
+    .id-job{
+        grid-area: id-job;
+
+    }
+    .invoice-page__bill-from{
+        grid-area: bill-from;
+
+    }
+    .dates{
+        grid-area: date;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+
+    }
+    .bill-to__container{
+        grid-area: bill-to;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+
+    }
+    .email-container{
+        grid-area: email;
+
+    }
+    .items{
+        grid-area: items;
+    }
+    .id{
+        margin-bottom: 7px;
+    }
+    .email{
+        margin-top: 15px;
+    }
+
+    @media(min-width: $tablet){
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        grid-template-areas: 
+            "id-job . . bill-from"
+            "date bill-to email email"
+            "items items items items"
+            ;
+        .id{
+            margin-bottom: 16px;
+        }
+        .bill-to__name{
+            margin-bottom: 13px;
+        }
+        p{
+            margin-bottom: 16px;
+        }
+    }
+
+    //// --------------
+
+    .id, .invoice-date, .payment-due__date, .bill-to__name, .email {
+        color: black;
+        font-size: 15px;
+    }
+    .invoice-date, .payment-due__date, .bill-to__name {
+        margin-top: 15px;
+    }
+
+    .invoice-page__bill-from p:not(:last-child), .invoice-page__bill-to p:not(:last-child){
+        margin-bottom: 3px;
+    }
+}
