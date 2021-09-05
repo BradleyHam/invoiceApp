@@ -27,79 +27,31 @@
    </a>
     <div class="invoice-page__status-bar">
       <p>Status</p>
-      <div class="invoice__status pending">Pending</div>
+      <div class="invoice__status"></div>
       <div class="buttonRow">
         <button class="button button-three">Edit</button>
-        <button class="button button-four delete">Delete</button>
+        <button class="button button-four delete-modal-opener">Delete</button>
         <button class="button button-two mark-paid">Mark as Paid</button>
      </div>
     </div>
     <div class="invoice-page__invoice-details" id="detail-container">
-        <div class="id-job">
-          <p class='id'> <span class="text-tertiary">#</span>ES3457</p>
-          <p class="job">Graphic Designer</p>
-        </div>
-        <div class="invoice-page__bill-from">
-            <p class='street'>street</p>
-            <p class='city'>city</p>
-            <p class='post-code'>post code</p>
-            <p class='country'>country</p>
-        </div>
-        <div class="dates">
-          <div class="invoice-date__container">
-            <p>Invoice Date</p>
-            <p class="invoice-date">23/2/12</p>
-          </div>
-          <div class="payment-due__container">
-            <p>Payment Due</p>
-            <p class="payment-due__date"> 12/4/12</p>
-          </div>
-        </div>
-        <div class="bill-to__container">
-          <div>
-            <p>bill to</p>
-            <p class="bill-to__name">Alex Grim</p>
-          </div>  
-          <div class="invoice-page__bill-to">
-            <p class='street'>street</p>
-            <p class='city'>city</p>
-            <p class='post-code'>post code</p>
-            <p class='country'>country</p>
-        </div>
-        </div>
-        <div class="email-container">
-          <p>Sent to</p>
-          <p class='email'>bradleyjamesham@gmail.com</p>
-        </div>
-        <div class="items">
-          <div class="item item-description">
-            <div class="item-summary__container">
-              <div class="item-job">Item Name</div>
-            </div>
-            <div class="item-qty">QTY</div>
-            <div class="item-price">Price</div>
-            <div class="item-total">Total</div>
-          </div>
-          <div class="item">
-          <div class="item-summary__container">
-            <div class="item-job">Design</div>
-            <div class="item-summary">1 x $200</div>
-          </div>
-          <div class="item-qty">3</div>
-          <div class="item-price">$200</div>
-          <div class="item-total">$200</div>
-        </div>
-        <div class="grand-total__container">
-          <p>Grand Total</p>
-          <div class="grand-total">$200</div>
-        </div>
-        </div>
     </div>
   </main>
 
+  <div class="deleteModal" id='deleteModal'>
+    <div class="deleteModal__content">
+      <h3>Confirm Deletion</h3>
+      <p>are you sure you want to delete invoice <span>id</span>? this action cannot be undone</p>
+      <div class="deleteModal__buttons">
+        <button id="deleteModal__cancel" class="button button-three">Cancel</button>
+        <button class="button button-four delete-invoice">Delete</button>
+      </div>
+    </div>
+  </div>
+
   <footer class="invoice-footer">
     <button class="button button-three">Edit</button>
-    <button class="button button-four delete">Delete</button>
+    <button id='delete-modal-opener' class="button button-four delete-modal-opener">Delete</button>
     <button class="button button-two mark-paid">Mark as Paid</button>
   </footer>
 

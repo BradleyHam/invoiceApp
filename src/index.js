@@ -9,6 +9,7 @@ import "./javascript/setup"
 // TOP BAR 
 import "./javascript/components/topBar/filterBar"
 import "./javascript/components/topBar/newInvoice"
+import "./javascript/components/topBar/invoiceAmount"
 
 // FORM
 import "./javascript/components/form/custom-select"
@@ -20,7 +21,6 @@ import "./javascript/components/form/validation"
 import "./javascript/components/form/backAndDiscard"
 
 // HOMEPAGE
-
 
 
 

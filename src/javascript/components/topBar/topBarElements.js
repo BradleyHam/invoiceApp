@@ -1,6 +1,6 @@
 const newInvoice = document.getElementById("new-invoice");
 const formSection = document.getElementById("form-section");
-
+const inoviceAmount = document.getElementById("invoice-amount");
 const filterBar = document.getElementById("filter-bar");
 const checkboxElements = document.querySelectorAll("input[type=checkbox]");
 
@@ -14,5 +14,6 @@ export default {
     filterBar,
     checkboxElements,
     filterArray,
-    invoices
+    invoices,
+    inoviceAmount
 }

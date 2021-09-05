@@ -47,13 +47,15 @@ formElements.save.addEventListener('click', () => {
     invoices.push(invoiceStructuredData);
     localStorage.setItem('invoices', JSON.stringify(invoices));
     formElements.invoiceList.insertAdjacentHTML('afterbegin', ` 
-    <li class="invoice">
-        <div class="invoice__id"><span class="text-tertiary">#</span>${invoiceStructuredData.id}</div>
-        <div class="invoice__name">${invoiceStructuredData.clientName}</div>
-        <div class="invoice__date">${invoiceStructuredData.createdAt}</div>
-        <div class="invoice__amount">$${invoiceStructuredData.total}</div>
-         <div class="invoice__status ${invoiceStructuredData.status}"><p class='${invoiceStructuredData.status}-text'>${invoiceStructuredData.status[0].toUpperCase() + invoiceStructuredData.status.slice(1).toLowerCase()}</p></div>
-     </li>`);
+    <a href='../../invoice.html?id=${id}' >
+        <li class="invoice">
+            <div class="invoice__id"><span class="text-tertiary">#</span>${invoiceStructuredData.id}</div>
+            <div class="invoice__name">${invoiceStructuredData.clientName}</div>
+            <div class="invoice__date">${invoiceStructuredData.createdAt}</div>
+            <div class="invoice__amount">$${invoiceStructuredData.total}</div>
+            <div class="invoice__status ${invoiceStructuredData.status}"><p class='${invoiceStructuredData.status}-text'>${invoiceStructuredData.status[0].toUpperCase() + invoiceStructuredData.status.slice(1).toLowerCase()}</p></div>
+        </li>
+     </a>`);
     formElements.formSection.classList.remove('active');
     main.classList.remove('form-active');
 });

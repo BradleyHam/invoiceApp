@@ -1,0 +1,45 @@
+body{
+    position: relative;
+}
+.deleteModal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20000;
+    background: rgba(0, 0, 0, 0.568);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    &__content{
+        background: white;
+        height: 220px;
+        width: 327px;
+        border-radius: 8px;
+        padding: 32px;
+    }
+    h3{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    p{
+        margin-top: 20px;
+        color: $textTertiary;
+        line-height: 22px;
+    }
+    &__buttons{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 34px;
+        button:first-child {
+            margin-right: 8px;
+        }
+    }
+}
+
+.deleteModal.active{
+    display: flex;
+}
