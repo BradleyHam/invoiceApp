@@ -1,8 +1,11 @@
 import formElements from '../form/formElements';
 
 export function validate(){
+    
     let allInputFields = Array.from(formElements.form.querySelectorAll('input'));
+   
     let errors = false;
+ 
     allInputFields.forEach(item => {
         if(item.value == ''){
             errors = true;
@@ -14,6 +17,7 @@ export function validate(){
            i.target.parentElement.classList.remove('error');
         })
     })
+
     if(errors){
         formElements.form.classList.add('error');
         let formSection = document.getElementById('form-section');
@@ -21,7 +25,9 @@ export function validate(){
     }else{
         formElements.form.classList.remove('error');
     }
+
     return errors;
+
 }
    
 

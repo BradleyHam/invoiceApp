@@ -12,13 +12,8 @@ import "./javascript/components/topBar/newInvoice"
 import "./javascript/components/topBar/invoiceAmount"
 
 // FORM
-import "./javascript/components/form/custom-select"
-import "./javascript/components/form/date-picker"
-import "./javascript/components/form/items/new-item"
-import "./javascript/components/form/items/item"
-import "./javascript/components/form/formInput"
-import "./javascript/components/form/validation"
-import "./javascript/components/form/backAndDiscard"
+
+import './javascript/components/form/module'
 
 // HOMEPAGE
 

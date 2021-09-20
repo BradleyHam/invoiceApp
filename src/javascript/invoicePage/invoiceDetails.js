@@ -1,11 +1,15 @@
 import invoiceEls from './invoicePageEls';
-const { currentId, statusContainer, detailsContainer } = invoiceEls;
+import { getCurrentInvoice } from '../functions/getCurrentInvoice';
+
+const { statusContainer, detailsContainer } = invoiceEls;
+
 
 export function renderInvoice(){
-  const currentObj = getCurrentObj()[0];
+
+  const currentObj = getCurrentInvoice();
 
   const { id, description, createdAt, paymentDue, clientEmail, clientName, paymentTerms, status, total, clientAddress: {  city, country, postCode, street }, senderAddress: { city: senderCity, country: senderCountry, postCode: senderPostCode, street: senderStreet } } = currentObj;
-
+  
   let detailsElements = `
   <div class="id-job">
       <p class='id'> <span class="text-tertiary">#</span>${id}</p>
@@ -70,12 +74,8 @@ export function renderInvoice(){
   detailsContainer.innerHTML = detailsElements;
 
   statusContainer.classList.add(currentObj.status);
+  
   statusContainer.innerText = currentObj.status;
-
-  function getCurrentObj(){
-    const invoices = JSON.parse(localStorage.getItem('invoices'));
-    return invoices.filter(obj => obj.id == currentId);
-  }
 }
 
 renderInvoice()

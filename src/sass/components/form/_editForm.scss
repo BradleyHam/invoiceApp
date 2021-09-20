@@ -1,0 +1,15 @@
+.form-section.edit{
+    .form__edit__heading{
+        display: block;
+    }
+    .form__new-invoice__heading{
+        display: none;
+    }
+    .form__draft-button{
+        display: none;
+    }
+}
+
+.form__edit__heading{
+    display: none;
+}

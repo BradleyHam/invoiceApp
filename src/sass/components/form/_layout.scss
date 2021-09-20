@@ -126,7 +126,7 @@
 }
 
 .item-list{
-    margin-top: 66px;
+    margin-top: 30px;
 }
 .item__grid-container{
     display: grid;
@@ -214,4 +214,8 @@ body.form-active{
     display: flex;
     justify-content: start;
     align-items: center;
+}
+
+.item-h2{
+    margin-top: 40px;
 }

@@ -27,9 +27,6 @@ newItem.addEventListener('click', (e) => {
     </div>`;
 
     itemList.insertAdjacentHTML('beforeend', newItem);
-
-    let items = document.querySelectorAll('.item');
-
     listenForChangeToTotal()
 
 });
@@ -38,9 +35,11 @@ itemList.addEventListener('click', function(e){
     e.target.classList.contains('delete-item') && e.target.parentElement.parentElement.remove();
  });
 
- function listenForChangeToTotal(){
-  let items = document.querySelectorAll('.item');
+function listenForChangeToTotal(){
+  let items = document.querySelectorAll('.item.item__grid-container');
+  console.log(items)
   items.forEach(item => {
+    console.log(item)
     let qty = item.querySelector('.qty');
     let price = item.querySelector('.price');
     let total = item.querySelector('.total');
@@ -54,11 +53,8 @@ itemList.addEventListener('click', function(e){
         }
       })
     })
+
   });
-
  }
- listenForChangeToTotal()
 
- function updateTotal(){
-   
- }
+ listenForChangeToTotal();
